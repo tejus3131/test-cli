@@ -1,8 +1,9 @@
 from datetime import datetime
 from textual.app import App, ComposeResult
-from textual.widgets import Static
+from textual.widgets import Static, Header
 from textual.timer import Timer
 from textual.reactive import reactive
+from textual.containers import Container
 
 
 class Clock(Static):
@@ -33,6 +34,17 @@ class ClockApp(App[Timer]):
         align: center middle;
     }
     
+    #title {
+        width: 100%;
+        height: auto;
+        content-align: center middle;
+        text-align: center;
+        text-style: bold;
+        color: #ffff00;
+        padding: 1;
+        background: #333333;
+    }
+    
     Clock {
         width: 100%;
         height: 100%;
@@ -49,6 +61,7 @@ class ClockApp(App[Timer]):
     
     def compose(self) -> ComposeResult:
         """Create the clock widget."""
+        yield Static("This is from test branch", id="title")
         yield Clock()
 
 
