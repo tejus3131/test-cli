@@ -60,7 +60,7 @@ class ClockApp(App[Timer]):
     
     def compose(self) -> ComposeResult:
         """Create the clock widget."""
-        yield Static("This is updated", id="title")
+        yield Static("This is updated again", id="title")
         yield Clock()
 
 
