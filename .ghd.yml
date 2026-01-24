@@ -1,0 +1,20 @@
+version: "1"
+
+clis:
+  - name: clock
+    description: A simple TUI clock application.
+    runtime: python
+    version: "3.11"
+    entry: test_cli.cli
+    entry_type: module
+    path: "."
+    dependency_mode: project
+    logging: false
+    tracing: false
+    
+  - name: js
+    runtime: node
+    version: "20"
+    entry: index.js
+    entry_type: script
+    path: "/js-cli"

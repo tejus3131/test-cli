@@ -17,3 +17,4 @@ test-cli = "test_cli:main"
 
 [tool.execx]
 entry-points = "test-cli"
+environment = "3.13"
